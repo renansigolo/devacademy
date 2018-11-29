@@ -3,8 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+	firebase: {
+		apiKey: 'AIzaSyDy7GgoXl2VCC04GSdCg8nsRIqCBDJWOTQ',
+		authDomain: 'devacademy-au.firebaseapp.com',
+		databaseURL: 'https://devacademy-au.firebaseio.com',
+		messagingSenderId: '128396269535',
+		projectId: 'devacademy-au',
+		storageBucket: 'devacademy-au.appspot.com'
+	},
+	production: false,
+	version: require('../../package.json').version
+}
 
 /*
  * For easier debugging in development mode, you can import the following file

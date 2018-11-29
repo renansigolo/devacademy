@@ -4,23 +4,45 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `npm run build:prod` for a production build.
 
-## Running unit tests
+## Deploy
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The code will be automatically deployed to production when committed to the master branch if passes all tests.
+
+Alternatively, you can run `npm run deploy` to update the host [Firebase CLI](https://firebase.google.com/docs/cli/)
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `npm run e2e` to execute the end-to-end tests via [Cypress](https://www.cypress.io/).
+
+## Built With
+
+- [Angular](https://angular.io/) - The framework used
+- [Angular Material](https://material.angular.io/) - Material Design components for Angular
+- [Angular Flex Layout](https://github.com/angular/flex-layout#readme) - Material Design components for Angular
+- [Bootstrap](https://getbootstrap.com/) - Framework for building responsive sites
+- [Firebase](https://firebase.google.com/) - Firebase helps mobile app teams succeed
+
+## Dev tools
+
+- [Prettier](https://prettier.io/) - Prettier is an opinionated code formatter.
+- [Husky](https://github.com/typicode/husky.git) - Git hooks made easy.
+- [Travis CI](https://travis-ci.org/) - Easily sync your GitHub projects with Travis CI and you'll be testing your code in minutes.
+- [Npm](https://www.npmjs.com/) - Build amazing things.
+- [Cypress](https://www.cypress.io/) - Fast, easy and reliable testing for anything that runs in a browser.
+
+## Authors
+
+- [Renan Sigolo](https://github.com/renansigolo)
+
+## License
+
+This project is licensed under the APACHE 2.0 License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Further help
 
