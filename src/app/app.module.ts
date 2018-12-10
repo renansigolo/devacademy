@@ -22,12 +22,12 @@ import { MatCardModule } from '@angular/material/card'
 import { MatTabsModule } from '@angular/material/tabs'
 
 import { NavbarComponent } from './components/navbar/navbar.component'
-import { HomeComponent } from './pages/home/home.component'
-import { LoginComponent } from './pages/login/login.component'
+import { HomeComponent } from '@pages/home/home.component'
+import { LoginComponent } from '@pages/login/login.component'
 import { SignupComponent } from './modals/signup/signup.component'
 import { MainComponent } from './my-experiment/main/main.component'
-import { CoursesComponent } from './pages/courses/courses.component'
-import { CourseDetailsComponent } from './pages/course-details/course-details.component'
+import { CoursesComponent } from '@pages/courses/courses.component'
+import { CourseDetailsComponent } from '@pages/course-details/course-details.component'
 import { FooterComponent } from './components/footer/footer.component'
 import { NewsletterComponent } from './components/web/newsletter/newsletter.component'
 import { YoutubeComponent } from './components/web/youtube/youtube.component'
@@ -69,7 +69,7 @@ import { LocationComponent } from './components/web/location/location.component'
 		MatCardModule,
 		MatTabsModule
 	],
-	entryComponents: [LoginComponent, SignupComponent],
+	entryComponents: [SignupComponent],
 	providers: [],
 	bootstrap: [AppComponent]
 })
