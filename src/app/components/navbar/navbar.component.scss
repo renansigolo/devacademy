@@ -1,0 +1,27 @@
+.fill-remaining-space {
+	flex: 1 1 auto;
+}
+
+mat-sidenav {
+	width: 100vw;
+}
+// .mat-button {
+//   text-align: right;
+// }
+
+.navbar-toggler {
+	border: 0;
+}
+
+.dropdown-menu {
+	background-color: #151515;
+	border: 0;
+
+	.dropdown-item {
+		color: #fff;
+	}
+
+	.dropdown-item:hover {
+		color: #151515;
+	}
+}

@@ -1,4 +1,30 @@
-mat-toolbar-row {
-  display: flex;
-  justify-content: space-between;
+.main {
+	img:first-child {
+		max-height: 60vh;
+		width: 100vw;
+	}
+
+	.btn {
+		border-radius: 0;
+		padding: 1rem;
+	}
+}
+
+.card {
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+
+	.card-img-top {
+		border-radius: 0;
+		transition: 0.5s;
+	}
+
+	.card-img-top:hover {
+		box-shadow: 0 10px 15px #999;
+	}
+
+	.card-body {
+		padding: 1.25rem 0;
+	}
 }

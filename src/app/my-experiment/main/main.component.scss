@@ -1,0 +1,37 @@
+.example-card {
+	margin: 2vh;
+	max-width: 90vw;
+}
+
+.example-header-image {
+	background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+	background-size: cover;
+}
+
+mat-tab-group {
+	flex-grow: 1 !important;
+}
+
+.mat-tab-labels {
+	flex-grow: 1 !important;
+}
+
+.mat-tab-label {
+	flex-grow: 1 !important;
+}
+
+.mat-ink-bar {
+	width: 50%;
+}
+
+mat-list-item {
+	text-align: left;
+}
+
+form {
+	margin: 2vh;
+}
+
+mat-card-footer {
+	background-color: #fdfdfd;
+}

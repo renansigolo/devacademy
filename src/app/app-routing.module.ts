@@ -1,18 +1,22 @@
 import { NgModule } from '@angular/core'
-import { RouterModule, Routes } from '@angular/router'
+import { Routes, RouterModule } from '@angular/router'
 
-const appRoutes: Routes = [
-	{ path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-	{ path: 'home', loadChildren: './pages/home/home.module#HomeModule' },
-	{ path: 'signup', loadChildren: './pages/signup/signup.module#SignupModule' },
-	{ path: 'login', loadChildren: './pages/login/login.module#LoginModule' }
+import { HomeComponent } from './pages/home/home.component'
+import { MainComponent } from './my-experiment/main/main.component'
+import { CoursesComponent } from './pages/courses/courses.component'
+import { CourseDetailsComponent } from './pages/course-details/course-details.component'
+import { LoginComponent } from './pages/login/login.component'
+
+const routes: Routes = [
+	{ path: '', component: HomeComponent },
+	{ path: 'login', component: LoginComponent },
+	{ path: 'myExperiment', component: MainComponent },
+	{ path: 'courses', component: CoursesComponent },
+	{ path: 'courses/details', component: CourseDetailsComponent }
 ]
 
 @NgModule({
-	imports: [RouterModule.forRoot(appRoutes)],
+	imports: [RouterModule.forRoot(routes)],
 	exports: [RouterModule]
 })
 export class AppRoutingModule {}
