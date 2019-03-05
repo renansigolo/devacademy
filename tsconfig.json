@@ -5,18 +5,19 @@
 		"outDir": "./dist/out-tsc",
 		"paths": {
 			"@environments/*": ["environments/*"],
-			"@pages/*": ["app/pages/*"]
+			"@pages/*": ["app/pages/*"],
+			"@shared/*": ["app/shared/*"]
 		},
 		"sourceMap": true,
-    "declaration": false,
-    "module": "es2015",
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "noUnusedParameters": true,
-    "noUnusedLocals": true,
-    "target": "es5",
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["es2018", "dom"]
+		"declaration": false,
+		"module": "es2015",
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"noUnusedParameters": true,
+		"noUnusedLocals": true,
+		"target": "es5",
+		"typeRoots": ["node_modules/@types"],
+		"lib": ["es2018", "dom"]
 	}
 }

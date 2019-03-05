@@ -1,0 +1,30 @@
+// Custom Bootstrap theme for DevAcademy
+// Import Nunito Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600');
+$font-family-base: 'Nunito', sans-serif;
+
+// DevAcademy theme colors
+$theme-colors: (
+	'primary': #D32E2E,
+	'secondary': #151515,
+	'tertiary': #00A2FF,
+	'danger': #dc3545,
+	'warning': #ffc107,
+	'success': #28a745,
+	'dark': #343a40,
+	'bg-gray': #fafafa
+);
+
+// Mastertech theme colors
+// $theme-colors: (
+// 	'primary': #f90030,
+// 	'secondary': #151515,
+// 	'danger': #dc3545,
+// 	'warning': #ffc107,
+// 	'success': #28a745,
+// 	'dark': #343a40,
+// 	'bg-gray': #fafafa
+// );
+
+// Import Bootstrap
+@import 'node_modules/bootstrap/scss/bootstrap';

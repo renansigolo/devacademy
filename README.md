@@ -1,40 +1,62 @@
 # Devacademy
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
+DevAcademy website
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+## Prerequisites
+
+What softwares you need to install in order to get started.
+
+> This project uses [npm](https://www.npmjs.com/) as a default package manager.
+
+1. [Node](https://nodejs.org/en/)
+1. [Npm](https://www.npmjs.com/)
+1. [Angular CLI](https://cli.angular.io/)
+1. [Firebase CLI](https://firebase.google.com/docs/cli/)
+
+## Installation
+
+1.  Clone the project from the [GitHub Repo](https://github.com/renansigolo/devacademy.git)
+
+1.  On terminal `cd devacademy` to go into the project root
+
+1.  Run `npm i` to install the dependencies of this project
 
 ## Development server
 
-Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1.  Run `npm start` to start the hot-reloading development server
+
+1.  Navigate to `http://localhost:4200`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
-Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `npm run build:prod` for a production build.
+- Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+- Use `npm run build:prod` for a production build.
 
 ## Deploy
 
-The code will be automatically deployed to production when committed to the master branch if passes all tests.
-
-Alternatively, you can run `npm run deploy` to update the host [Firebase CLI](https://firebase.google.com/docs/cli/)
-
-## Running end-to-end tests
-
-Run `npm run e2e` to execute the end-to-end tests via [Cypress](https://www.cypress.io/).
+- Run `npm run deploy` to deploy the project to the **development** environment
+  , which can be accessed at devacademy-au.firebaseapp.com
 
 ## Built With
 
-- [Angular](https://angular.io/) - The framework used
+- [Angular](https://angular.io/) - One framework. Mobile & desktop
 - [Angular Material](https://material.angular.io/) - Material Design components for Angular
-- [Angular Flex Layout](https://github.com/angular/flex-layout#readme) - Material Design components for Angular
-- [Bootstrap](https://getbootstrap.com/) - Framework for building responsive sites
+- [Angular Flex Layout](https://github.com/angular/flex-layout) - Provides HTML UI layout for Angular applications; using Flexbox and a Responsive API
 - [Firebase](https://firebase.google.com/) - Firebase helps mobile app teams succeed
 
-## Dev tools
+### Plugins
 
+- [Nunito Font](https://fonts.google.com/specimen/Nunito) - Default Font
+
+### Dev tools
+
+- [TSLint](https://palantir.github.io/tslint/) - An extensible linter for the TypeScript language.
 - [Prettier](https://prettier.io/) - Prettier is an opinionated code formatter.
-- [Husky](https://github.com/typicode/husky.git) - Git hooks made easy.
-- [Travis CI](https://travis-ci.org/) - Easily sync your GitHub projects with Travis CI and you'll be testing your code in minutes.
-- [Npm](https://www.npmjs.com/) - Build amazing things.
-- [Cypress](https://www.cypress.io/) - Fast, easy and reliable testing for anything that runs in a browser.
 
 ## Authors
 
