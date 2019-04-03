@@ -1,66 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
-@import 'src/assets/scss/bootstrap-theme.scss';
+// Import Nunito Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600');
+$font-family-base: 'Nunito', sans-serif;
 
-// body {
-//   margin: 0;
-//
-//   mat-sidenav-content {
-//     min-height: 100vh;
-//   }
-// }
+// Import Angular Material Theme
+@import 'src/assets/scss/angular-material-theme';
+
+// Import Angular Material Core Dependencies
+@include mat-core();
+@include angular-material-theme($theme);
+
+// Import Bootstrap Theme
+@import 'src/assets/scss/bootstrap-theme';
 
 // Styles to General Elements
+html,
+body {
+  height: 100%;
+}
 
 body {
-	margin-top: 58px;
+  //   font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
 }
 
 h2 {
-	font-size: 1.5rem;
-	margin-bottom: 4rem;
-	padding: 0 2%;
-	position: relative;
-	text-align: center;
-	z-index: 1;
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+  padding: 0 2%;
+  position: relative;
+  text-align: center;
+  z-index: 1;
 }
 
 h2 span {
-	background: map-get($theme-colors, bg-gray);
-	font-weight: bold;
-	padding: 0 15px;
+  background: map-get($theme-colors, bg-gray);
+  font-weight: bold;
+  padding: 0 15px;
 }
 
 h2::before {
-	border-top: 2px solid #dfdfdf;
-	bottom: 0;
-	// content: '';
-	left: 0;
-	margin: 0 auto;
-	position: absolute;
-	right: 0;
-	top: 50%;
-	width: 100%;
-	z-index: -1;
+  border-top: 2px solid #dfdfdf;
+  bottom: 0;
+  // content: '';
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 100%;
+  z-index: -1;
 }
 
 h5,
 h6 {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .form-control {
-	input,
-	textarea {
-		border-left: 0;
-		border-radius: 0;
-	}
+  input,
+  textarea {
+    border-left: 0;
+    border-radius: 0;
+  }
 }
 
 .input-group-text {
-	background-color: #fff !important;
+  background-color: #fff !important;
 }
 
 .btn {
-	border-radius: 0;
+  border-radius: 0;
 }

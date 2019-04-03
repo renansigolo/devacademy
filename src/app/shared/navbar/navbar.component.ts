@@ -1,23 +1,23 @@
 import { Component } from '@angular/core'
 
 @Component({
-	selector: 'app-navbar',
-	templateUrl: './navbar.component.html',
-	styleUrls: ['./navbar.component.scss']
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-	courses = [
-    { 
+  courses = [
+    {
       name: 'Build Your First App',
-     path: 'courses/details' 
+      path: 'courses/details'
     },
-    { 
+    {
       name: 'Build your first website',
-     path: 'courses/details' 
+      path: 'courses/details'
     }
-	]
+  ]
 
-	constructor() {
+  constructor() {
     console.log(this.courses)
   }
 }

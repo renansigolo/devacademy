@@ -31,43 +31,46 @@ import { YoutubeComponent } from './components/web/youtube/youtube.component'
 import { AwardsComponent } from './components/web/awards/awards.component'
 import { LocationComponent } from './components/web/location/location.component'
 
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { FlexLayoutModule } from '@angular/flex-layout'
+import { GetNotifiedComponent } from './components/web/get-notified/get-notified.component'
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		HomeComponent,
-		SignupComponent,
-		CoursesComponent,
-		CourseDetailsComponent,
-		NewsletterComponent,
-		YoutubeComponent,
-		AwardsComponent,
-		LocationComponent
-	],
-	imports: [
-		BrowserModule,
-		AppRoutingModule,
-		BrowserAnimationsModule,
-		ServiceWorkerModule.register('/ngsw-worker.js', {
-			enabled: environment.production
-		}),
-		SharedModule,
-		FlexLayoutModule,
-		MatToolbarModule,
-		MatButtonModule,
-		MatIconModule,
-		MatSidenavModule,
-		MatListModule,
-		MatGridListModule,
-		MatDialogModule,
-		MatInputModule,
-		MatExpansionModule,
-		MatCardModule,
-		MatTabsModule
-	],
-	entryComponents: [SignupComponent],
-	providers: [],
-	bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    SignupComponent,
+    CoursesComponent,
+    CourseDetailsComponent,
+    NewsletterComponent,
+    YoutubeComponent,
+    AwardsComponent,
+    LocationComponent,
+    GetNotifiedComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', {
+      enabled: environment.production
+    }),
+    SharedModule,
+    FlexLayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    MatGridListModule,
+    MatDialogModule,
+    MatInputModule,
+    MatExpansionModule,
+    MatCardModule,
+    MatTabsModule
+  ],
+  entryComponents: [SignupComponent],
+  providers: [],
+  bootstrap: [AppComponent],
+  exports: [GetNotifiedComponent]
 })
 export class AppModule {}

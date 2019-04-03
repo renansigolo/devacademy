@@ -1,26 +1,27 @@
-<mat-toolbar color="secondary">
-	<mat-toolbar-row>
-    <img src="assets/imgs/brand/logo/icon-white.svg" alt="DevAcademy Logo">
-		<!-- <span>DevAcademy</span> -->
-		<span class="spacer"></span>
-    
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <img src="assets/imgs/brand/logo/icon-white.svg" alt="DevAcademy Logo" />
+    <!-- <span>DevAcademy</span> -->
+    <span class="spacer"></span>
+
     <button mat-icon-button [matMenuTriggerFor]="menu">
-			<mat-icon>menu</mat-icon>
-		</button>
-    
+      <mat-icon>menu</mat-icon>
+    </button>
+
     <mat-menu #menu="matMenu">
-			<button mat-menu-item>
-				<span>All Courses</span>
-      </button>
-      
-			<button mat-menu-item [matMenuTriggerFor]="coding">
-				<span>Coding for Non-Programmers</span>
+      <button mat-menu-item>
+        <span>All Courses</span>
       </button>
 
+      <button mat-menu-item [matMenuTriggerFor]="coding">
+        <span>Coding for Non-Programmers</span>
+      </button>
     </mat-menu>
-    
+
     <mat-menu #coding="matMenu">
-        <button mat-menu-item *ngFor="let course of courses">{{course.name | titlecase}}</button>
-      </mat-menu>
-	</mat-toolbar-row>
+      <button mat-menu-item *ngFor="let course of courses">
+        {{ course.name | titlecase }}
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
 </mat-toolbar>
