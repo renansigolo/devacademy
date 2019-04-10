@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module'
 
@@ -51,6 +52,7 @@ import { GetNotifiedComponent } from './components/web/get-notified/get-notified
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     ServiceWorkerModule.register('/ngsw-worker.js', {
       enabled: environment.production
     }),
@@ -66,7 +68,8 @@ import { GetNotifiedComponent } from './components/web/get-notified/get-notified
     MatInputModule,
     MatExpansionModule,
     MatCardModule,
-    MatTabsModule
+    MatTabsModule,
+    ReactiveFormsModule
   ],
   entryComponents: [SignupComponent],
   providers: [],

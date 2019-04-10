@@ -1,3 +1,50 @@
-<p>
-  get-notified works!
-</p>
+<div
+  fxLayout="column"
+  fxLayout.gt-sm="row"
+  fxLayoutAlign="space-evenly center"
+  class="py-5 background-banner"
+>
+  <div class="limit-width px-3">
+    <h3>DevAcademy</h3>
+    <p>
+      We provide immersive courses in technology, enabling people to understand
+      and transform the world around them.
+    </p>
+  </div>
+
+  <div class="limit-width">
+    <mat-card class="card-width">
+      <mat-card-header>
+        <mat-card-title>Get Notified</mat-card-title>
+        <mat-card-subtitle>
+          Fill out your details below to get notified of our upcoming events you
+          can attend for a variety of hands-on workshops for non-developers and
+          beginners.
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content class="px-3">
+        <form [formGroup]="getNotifiedForm" (ngSubmit)="submitGetNotifiedForm()">
+        <div class="name-container">
+          <mat-form-field>
+            <input matInput placeholder="First Name" formControlName="firstName" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Last Name" formControlName="lastName" />
+          </mat-form-field>
+        </div>
+
+        <div class="email-container">
+          <mat-form-field>
+            <input matInput placeholder="Email Address" formControlName="email" />
+          </mat-form-field>
+        </div>
+
+        <mat-card-actions class="pl-2">
+          <button mat-flat-button color="accent" type="submit">Notify Me</button>
+        </mat-card-actions>
+      </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

@@ -1,10 +1,10 @@
-<footer class="bg-secondary mt-5">
+<footer class="pt-3">
   <div class="container">
     <div class="row">
       <div class="col-lg-3 col-sm-12">
         <img
-          class="img-fluid pt-3 pb-3"
-          src="assets/imgs/home/devacademy-logo.svg"
+          class="img-fluid pt-2 pb-3"
+          src="assets/imgs/brand/logos/logo-white.svg"
         />
         <p class="text-light">
           DevAcademy is more than a school, we are educating for the future. We
@@ -28,29 +28,45 @@
             </a>
           </li>
           <li>
-            <a href="https://goo.gl/maps/WtdHMMyCmxJ2" target="_blank">
-              Location
-            </a>
-          </li>
-          <li>
-            <a href="https://blog.DevAcademy.tech/" target="_blank">Blog</a>
-          </li>
-          <li>
             <a
-              href="mailto:renan@devacademy.com.au?Subject=DevAcademy"
+              href="mailto:renan@devacademy.com.au?Subject=Become a DevAcademy Instructor"
               target="_top"
             >
               Become an instructor
             </a>
           </li>
+          <li>
+            <a href="https://goo.gl/maps/W4fYKWVb1GJ2" target="_blank">
+              Location
+            </a>
+          </li>
+          <!-- <li>
+            <a href="https://blog.DevAcademy.tech/" target="_blank">Blog</a>
+          </li> -->
         </ul>
         <hr class=" d-lg-none" />
       </div>
       <div class="col-lg-2 col-sm-12">
         <ul>
-          <li>Talk with us</li>
-          <li>Email:hello@devacademy.com.au</li>
-          <li>Whats: + 61 434385978</li>
+          <li>Get in touch</li>
+          <li>
+            <a
+              href="mailto:hello@devacademy.com.au?Subject=Contact Website"
+              target="_top"
+            >
+              hello@devacademy.com.au
+            </a>
+          </li>
+          
+          <li *ngFor="let social of socialMedia">
+            <a
+              href="{{social.path}}"
+              target="_blank"
+            >
+              {{social.name}}
+            </a>
+          </li>
+
         </ul>
       </div>
     </div>

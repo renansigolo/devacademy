@@ -6,17 +6,8 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  slides: any = []
 
   constructor() {
-    this.slides = [
-      {
-        image: 'http://via.placeholder.com/640x320'
-      },
-      {
-        image: 'http://via.placeholder.com/640x320'
-      }
-    ]
   }
 
   ngOnInit() {}

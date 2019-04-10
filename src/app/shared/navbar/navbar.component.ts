@@ -9,15 +9,18 @@ export class NavbarComponent {
   courses = [
     {
       name: 'Build Your First App',
-      path: 'courses/details'
+      path: 'courses/build-your-first-app'
     },
     {
       name: 'Build your first website',
-      path: 'courses/details'
+      path: 'courses/build-your-first-website'
+    },
+    {
+      name: 'Build an app with image recognition',
+      path: 'courses/build-an-app-with-image-recognition'
     }
   ]
 
   constructor() {
-    console.log(this.courses)
   }
 }

@@ -1,0 +1,33 @@
+.background-banner {
+  background-image: url('assets/imgs/get-notified/bg-banner.jpg');
+  background-size: cover;
+  min-height: 80vh;
+  color: #fff;
+}
+
+.limit-width {
+  max-width: 45vh;
+}
+
+.card-width {
+  max-width: 92vw;
+  background: rgba(#f3f3f3, 0.92);
+}
+
+.name-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-container > * {
+  width: 48%;
+}
+
+.email-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-container > * {
+  width: 100%;
+}

@@ -1,6 +1,5 @@
 // Import Nunito Font
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600');
-$font-family-base: 'Nunito', sans-serif;
 
 // Import Angular Material Theme
 @import 'src/assets/scss/angular-material-theme';
@@ -8,6 +7,9 @@ $font-family-base: 'Nunito', sans-serif;
 // Import Angular Material Core Dependencies
 @include mat-core();
 @include angular-material-theme($theme);
+
+// Override the typography in the core CSS.
+@include mat-core($devacademy-typography);
 
 // Import Bootstrap Theme
 @import 'src/assets/scss/bootstrap-theme';
@@ -19,8 +21,6 @@ body {
 }
 
 body {
-  //   font-family: Roboto, 'Helvetica Neue', sans-serif;
-  font-family: 'Nunito', sans-serif;
   margin: 0;
 }
 
