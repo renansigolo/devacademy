@@ -33,11 +33,11 @@ h2 {
   z-index: 1;
 }
 
-h2 span {
-  background: map-get($theme-colors, bg-gray);
-  font-weight: bold;
-  padding: 0 15px;
-}
+// h2 span {
+//   background: map-get($theme-colors, bg-gray);
+//   font-weight: bold;
+//   padding: 0 15px;
+// }
 
 h2::before {
   border-top: 2px solid #dfdfdf;

@@ -9,8 +9,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 export class GetNotifiedComponent implements OnInit {
   getNotifiedForm: FormGroup
 
-  constructor(private fb: FormBuilder,) {
-      this.getNotifiedForm = this.fb.group({
+  constructor(private fb: FormBuilder) {
+    this.getNotifiedForm = this.fb.group({
       firstName: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]]

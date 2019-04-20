@@ -21,6 +21,5 @@ export class NavbarComponent {
     }
   ]
 
-  constructor() {
-  }
+  constructor() {}
 }

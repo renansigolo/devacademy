@@ -57,16 +57,12 @@
               hello@devacademy.com.au
             </a>
           </li>
-          
+
           <li *ngFor="let social of socialMedia">
-            <a
-              href="{{social.path}}"
-              target="_blank"
-            >
-              {{social.name}}
+            <a href="{{ social.path }}" target="_blank">
+              {{ social.name }}
             </a>
           </li>
-
         </ul>
       </div>
     </div>

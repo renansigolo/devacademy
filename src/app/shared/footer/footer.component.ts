@@ -25,7 +25,8 @@ export class FooterComponent implements OnInit {
     },
     {
       name: 'Google',
-      path: 'https://www.google.com/search?q=DevAcademy&ludocid=14494742044709126411&lsig=AB86z5XGivhQdjEV2v6d0KsGZ0pM#fpstate=lie'
+      path:
+        'https://www.google.com/search?q=DevAcademy&ludocid=14494742044709126411&lsig=AB86z5XGivhQdjEV2v6d0KsGZ0pM#fpstate=lie'
     }
   ]
 
