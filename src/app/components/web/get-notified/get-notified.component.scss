@@ -7,6 +7,19 @@
   color: $light;
 }
 
+.logo-detail {
+  color: $primary;
+  font-weight: 600;
+}
+
+.brief-desc {
+  padding-bottom: 30px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+  letter-spacing: 0.5px;
+}
+
 .limit-width {
   max-width: 45vh;
 }
@@ -14,6 +27,21 @@
 .card-width {
   max-width: 92vw;
   background: rgba($bg-light, 0.92);
+
+  mat-card-title {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: $dark;
+  }
+
+  mat-card-subtitle {
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.5px;
+  }
 }
 
 .name-container {
