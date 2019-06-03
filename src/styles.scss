@@ -14,6 +14,20 @@
 // Import Bootstrap Theme
 @import 'src/assets/scss/bootstrap-theme';
 
+:root {
+  $primary: #d32e2e;
+  $secondary: #414042;
+  $tertiary: #00a2ff;
+
+  $dark: #212121;
+  $light: #ffffff;
+
+  $bg-light: #f3f3f3;
+  $bg-dark: #212121;
+
+  $tablet: 769px;
+}
+
 // Styles to General Elements
 html,
 body {
@@ -26,11 +40,11 @@ body {
 
 h2 {
   font-size: 1.5rem;
-  margin-bottom: 4rem;
+/*   margin-bottom: 4rem;
   padding: 0 2%;
   position: relative;
   text-align: center;
-  z-index: 1;
+  z-index: 1; */
 }
 
 // h2 span {
