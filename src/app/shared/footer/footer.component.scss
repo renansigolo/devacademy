@@ -1,8 +1,23 @@
+@import 'src/assets/scss/variables';
+
 footer {
-  color: #fff;
-  background-color: #212121;
+  background-color: $bg-dark;
+  color: $light;
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 10%;
+
+  h2 {
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+
+  div:first-child {
+    margin-bottom: 20px;
+  }
 
   img {
+    margin-bottom: 10px;
     max-width: 35vh;
   }
 
@@ -10,18 +25,22 @@ footer {
     padding-left: 0;
   }
 
-  li:first-child {
-    font-size: 1.125em;
-    font-weight: bold;
-  }
-
   li {
     font-size: 0.875em;
-    line-height: 31px;
+    line-height: 25px;
     list-style: none;
   }
 
   a {
-    color: #fff;
+    color: $light;
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    div:first-child {
+      max-width: 35%;
+    }
   }
 }

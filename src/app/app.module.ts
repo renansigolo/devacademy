@@ -33,7 +33,8 @@ import { AwardsComponent } from './components/web/awards/awards.component'
 import { LocationComponent } from './components/web/location/location.component'
 
 import { FlexLayoutModule } from '@angular/flex-layout'
-import { GetNotifiedComponent } from './components/web/get-notified/get-notified.component'
+import { GetNotifiedComponent } from './components/web/get-notified/get-notified.component';
+import { PartnersComponent } from './components/partners/partners.component'
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { GetNotifiedComponent } from './components/web/get-notified/get-notified
     YoutubeComponent,
     AwardsComponent,
     LocationComponent,
-    GetNotifiedComponent
+    GetNotifiedComponent,
+    PartnersComponent
   ],
   imports: [
     BrowserModule,

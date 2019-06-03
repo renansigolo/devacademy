@@ -1,6 +1,50 @@
 <!-- <app-navbar></app-navbar> -->
-<section>
-  <mat-card class="example-card">
+<section id="courses">
+  <h2 class="section-title">Upcoming Courses</h2>
+
+  <div class="courses-container">
+    <div class="img-title" *ngFor="let course of courses">
+      <a href="#">
+        <img
+          src="{{ course.image }}"
+          alt="Course image"
+        />
+        <h3>{{ course.title }}</h3>
+      </a>
+    </div>
+
+<!--   <div>
+    <div class="img-title">
+      <a href="#">
+        <img
+          src="https://via.placeholder.com/350x200"
+          alt="Course image"
+        />
+        <h3>Course Title</h3>
+      </a>
+    </div>
+
+    <div class="img-title">
+      <a href="#">
+        <img
+          src="https://via.placeholder.com/350x200"
+          alt="Course image"
+        />
+        <h3>Course Title</h3>
+      </a>
+    </div>
+
+    <div class="img-title">
+      <a href="#">
+        <img
+          src="https://via.placeholder.com/350x200"
+          alt="Course image"
+        />
+        <h3>Course Title</h3>
+      </a>
+    </div> -->
+  </div>
+<!--   <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>Shiba Inu</mat-card-title>
@@ -44,8 +88,10 @@
     <mat-card-actions>
       <button mat-button>Go somewhere</button>
     </mat-card-actions>
-  </mat-card>
+  </mat-card> -->
 </section>
+
+<app-partners></app-partners>
 
 <section class="container mt-5" id="courses-boxes">
   <h2 class="font-weight-bold">Life Changing Courses</h2>

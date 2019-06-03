@@ -21,17 +21,18 @@ body {
 }
 
 body {
+  font-size: 18px;
   margin: 0;
 }
 
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 4rem;
+/*h2 {
+  font-size: 1.8em;
+   margin-bottom: 4rem;
   padding: 0 2%;
   position: relative;
   text-align: center;
-  z-index: 1;
-}
+  z-index: 1; 
+}*/
 
 // h2 span {
 //   background: map-get($theme-colors, bg-gray);
@@ -39,7 +40,7 @@ h2 {
 //   padding: 0 15px;
 // }
 
-h2::before {
+/* h2::before {
   border-top: 2px solid #dfdfdf;
   bottom: 0;
   // content: '';
@@ -50,7 +51,7 @@ h2::before {
   top: 50%;
   width: 100%;
   z-index: -1;
-}
+} */
 
 h5,
 h6 {
