@@ -3,8 +3,8 @@
 .background-banner {
   background-image: url('assets/imgs/get-notified/bg-banner.jpg');
   background-size: cover;
-  min-height: 90vh;
   color: $light;
+  min-height: 90vh;
 }
 
 .logo-detail {
@@ -15,8 +15,8 @@
 .brief-desc {
   font-size: 1.4rem;
   font-weight: 300;
-  line-height: 1.8rem;
   letter-spacing: 0.5px;
+  line-height: 1.8rem;
 }
 
 .limit-width {
@@ -24,22 +24,22 @@
 }
 
 .card-width {
-  max-width: 92vw;
   background: rgba($bg-light, 0.92);
+  max-width: 92vw;
 
   mat-card-title {
-    font-weight: bold;
-    font-size: 1.6rem;
     color: $dark;
+    font-size: 1.6rem;
+    font-weight: bold;
   }
 
   mat-card-subtitle {
     font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.5px;
     line-height: 1rem;
     margin-bottom: 20px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.5px;
   }
 }
 
