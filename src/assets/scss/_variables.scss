@@ -9,3 +9,19 @@ $bg-light: #f3f3f3;
 $bg-dark: #212121;
 
 $tablet: 769px;
+
+%section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    line-height: 1em;
+    padding: 48px 0 0;
+  }
+}

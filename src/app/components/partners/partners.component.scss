@@ -1,0 +1,11 @@
+@import 'src/assets/scss/variables';
+
+#partners {
+  @extend %section-title;
+  background-color: $light;
+
+  img {
+    max-width: 100%;
+    padding-top: 32px;
+  }
+}
