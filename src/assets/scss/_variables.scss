@@ -3,7 +3,7 @@ $secondary: #414042;
 $tertiary: #00a2ff;
 
 $dark: #212121;
-$light: #ffffff;
+$light: #fff;
 
 $bg-light: #f3f3f3;
 $bg-dark: #212121;
@@ -11,17 +11,17 @@ $bg-dark: #212121;
 $tablet: 769px;
 
 %section-title {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 
   h2 {
-    text-align: center;
-    font-size: 1.8rem;
     font-family: 'Nunito', sans-serif;
+    font-size: 1.8rem;
     font-weight: 700;
     line-height: 1em;
     padding: 48px 0 0;
+    text-align: center;
   }
 }

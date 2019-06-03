@@ -1,10 +1,10 @@
 @import 'src/assets/scss/variables';
 
 footer {
+  background-color: $bg-dark;
+  color: $light;
   display: flex;
   flex-direction: column;
-  color: $light;
-  background-color: $bg-dark;
   padding: 2vh 10%;
 
   h2 {
@@ -17,8 +17,8 @@ footer {
   }
 
   img {
-    max-width: 35vh;
     margin-bottom: 10px;
+    max-width: 35vh;
   }
 
   ul {
