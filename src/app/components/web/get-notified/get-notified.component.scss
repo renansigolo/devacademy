@@ -1,8 +1,10 @@
+@import 'src/assets/scss/variables';
+
 .background-banner {
   background-image: url('assets/imgs/get-notified/bg-banner.jpg');
   background-size: cover;
   min-height: 90vh;
-  color: #fff;
+  color: $light;
 }
 
 .limit-width {
@@ -11,7 +13,7 @@
 
 .card-width {
   max-width: 92vw;
-  background: rgba(#f3f3f3, 0.92);
+  background: rgba($bg-light, 0.92);
 }
 
 .name-container {
