@@ -1,7 +1,7 @@
 {
   "name": "devacademy",
   "version": "0.0.1",
-  "description": "DevAcademy App",
+  "description": "DevAcademy Website",
   "homepage": "https://devacademy.com.au",
   "bugs": {
     "url": "https://github.com/renansigolo/devacademy/issues",
@@ -59,7 +59,7 @@
     "@angular/language-service": "^8.0.0",
     "@types/node": "^12.0.4",
     "codelyzer": "^5.0.1",
-    "prettier": "~1.17.1",
+    "prettier": "^1.18.2",
     "stylelint": "^10.0.1",
     "stylelint-config-sass-guidelines": "^6.0.0",
     "stylelint-scss": "^3.6.1",
@@ -68,7 +68,7 @@
     "typescript": "3.4.5"
   },
   "engines": {
-    "node": "~10.15.0",
+    "node": ">=10.15.0",
     "npm": ">=6.5.0",
     "yarn": "NO LONGER USED - Please use npm"
   }

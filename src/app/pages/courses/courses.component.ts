@@ -18,7 +18,7 @@ export class CoursesComponent implements OnInit {
     {
       title: 'Course Title 3',
       image: 'https://via.placeholder.com/350x200'
-    },
+    }
   ]
 
   constructor() {}
