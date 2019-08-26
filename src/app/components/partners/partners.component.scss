@@ -4,8 +4,24 @@
   @extend %section-title;
   background-color: $light;
 
+  .partners-content {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      margin: 1%;
+    }
+  }
+
   img {
     max-width: 100%;
+    max-height: 40vh;
     padding-top: 32px;
   }
 }
+
+@media only screen and (min-width: 768px) {
+  #partners .partners-content {
+    flex-direction: row;
+  }
+};
