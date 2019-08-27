@@ -5,48 +5,49 @@ const functions = require('firebase-functions'),
 
 admin.initializeApp()
 
-// const gmailEmail = functions.config().gmail.email
-// const gmailPassword = functions.config().gmail.password
-// const mailTransport = nodemailer.createTransport({
-//   service: 'gmail',
-//   host: 'smtp.gmail.com',
-//   port: 465,
-//   secure: true,
-//   auth: {
-//     user: gmailEmail,
-//     pass: gmailPassword
-//   }
-// })
+const gmailEmail = functions.config().gmail.email
+const gmailPassword = functions.config().gmail.password
+const mailTransport = nodemailer.createTransport({
+  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
+  auth: {
+    user: gmailEmail,
+    pass: gmailPassword
+  }
+})
 
 exports.sendEmail = functions.https.onRequest((req, res) => {
   return cors(req, res, () => {
     const formPayload = {
-      username: req.body.username,
-      postEditUrl: req.body.postEditUrl,
-      postPreviewUrl: req.body.postPreviewUrl
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email
     }
 
     const mailOptions = {
-      subject: 'DevAcademy Website Subscription',
-      from: '"DevAcademy Website" <hello@devacademy.com.au>',
-      to: 'hello@devacademy.com.au',
+      subject: 'DevAcademy - New Subscriber',
+      from: '"DevAcademy Website" <no-reply@devacademy.com.au>',
+      to: 'hello@devacademy.com.au'
     }
 
     // Build Email message.
     const htmlMessage = `
-    <p>Hello,</p>
-    <p>${formPayload.username} has just submitted an Approved Truck.</p>
-    <p>You can see a preview of the Approved Truck <a href="${formPayload.postPreviewUrl}">here</a></p>
-    <p>You can edit and publish the Approved Truck <a href="${formPayload.postEditUrl}">here</a></p>
-    <p>Yours robotically,</p>
-    <p>The Linde Approved Trucks app 🤖</p>`
+    <p>New DevAcademy Subscriber</p>
+    <p><strong>Name:</strong> ${formPayload.firstName} ${formPayload.lastName}</p>
+    <p><strong>First Name:</strong> ${formPayload.firstName}</p>
+    <p><strong>Last Name:</strong> ${formPayload.lastName}</p>
+    <p><strong>Email:</strong> ${formPayload.email}</p>
+    `
 
-    const textMessage = `Hello,
-    ${formPayload.username} has just submitted an Approved Truck. 
-    You can see a preview of the Approved Truck here: ${formPayload.postPreviewUrl}
-    You can edit and publish the Approved Truck here: ${formPayload.postEditUrl}
-    Yours robotically,
-    The Linde Approved Trucks app 🤖`
+    const textMessage = `
+    New DevAcademy Subscriber
+    Name: ${formPayload.firstName} ${formPayload.lastName}
+    First Name: ${formPayload.firstName}
+    Last Name: ${formPayload.lastName}
+    Email: ${formPayload.email}
+    `
 
     mailOptions.html = htmlMessage
     mailOptions.text = textMessage
