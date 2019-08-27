@@ -30,7 +30,7 @@ import { NewsletterComponent } from './components/web/newsletter/newsletter.comp
 import { YoutubeComponent } from './components/web/youtube/youtube.component'
 import { SignupComponent } from './modals/signup/signup.component'
 import { HttpClientModule } from '@angular/common/http'
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar'
 
 @NgModule({
   declarations: [
