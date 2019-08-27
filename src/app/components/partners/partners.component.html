@@ -1,9 +1,13 @@
 <section id="partners">
   <h2>Our Partners</h2>
 
-  <div>
-    <a href="#">
-      <img src="https://via.placeholder.com/300x200" alt="Partner's logo" />
+  <div class="partners-content">
+    <a
+      href="{{ partner.webUrl }}"
+      *ngFor="let partner of partnersData"
+      target="_blank"
+    >
+      <img src="{{ partner.imgUrl }}" alt="{{ partner.name }} logo" />
     </a>
   </div>
 </section>

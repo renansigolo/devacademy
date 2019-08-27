@@ -1,40 +1,36 @@
-import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { FlexLayoutModule } from '@angular/flex-layout'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
-
-import { AppRoutingModule } from './app-routing.module'
-
-import { ServiceWorkerModule } from '@angular/service-worker'
-import { AppComponent } from './app.component'
-
-import { environment } from '../environments/environment'
-
-import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatButtonModule } from '@angular/material/button'
-import { MatIconModule } from '@angular/material/icon'
-import { MatSidenavModule } from '@angular/material/sidenav'
-import { MatListModule } from '@angular/material/list'
-import { MatGridListModule } from '@angular/material/grid-list'
-import { MatDialogModule } from '@angular/material/dialog'
-import { MatInputModule } from '@angular/material/input'
-import { MatExpansionModule } from '@angular/material/expansion'
 import { MatCardModule } from '@angular/material/card'
+import { MatDialogModule } from '@angular/material/dialog'
+import { MatExpansionModule } from '@angular/material/expansion'
+import { MatGridListModule } from '@angular/material/grid-list'
+import { MatIconModule } from '@angular/material/icon'
+import { MatInputModule } from '@angular/material/input'
+import { MatListModule } from '@angular/material/list'
+import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatTabsModule } from '@angular/material/tabs'
-import { SharedModule } from '@shared/shared.module'
-
-import { HomeComponent } from '@pages/home/home.component'
-import { SignupComponent } from './modals/signup/signup.component'
-import { CoursesComponent } from '@pages/courses/courses.component'
+import { MatToolbarModule } from '@angular/material/toolbar'
+import { BrowserModule } from '@angular/platform-browser'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { ServiceWorkerModule } from '@angular/service-worker'
 import { CourseDetailsComponent } from '@pages/course-details/course-details.component'
+import { CoursesComponent } from '@pages/courses/courses.component'
+import { HomeComponent } from '@pages/home/home.component'
+import { SharedModule } from '@shared/shared.module'
+import { environment } from '../environments/environment'
+import { AppRoutingModule } from './app-routing.module'
+import { AppComponent } from './app.component'
+import { PartnersComponent } from './components/partners/partners.component'
+import { AwardsComponent } from './components/web/awards/awards.component'
+import { GetNotifiedComponent } from './components/web/get-notified/get-notified.component'
+import { LocationComponent } from './components/web/location/location.component'
 import { NewsletterComponent } from './components/web/newsletter/newsletter.component'
 import { YoutubeComponent } from './components/web/youtube/youtube.component'
-import { AwardsComponent } from './components/web/awards/awards.component'
-import { LocationComponent } from './components/web/location/location.component'
-
-import { FlexLayoutModule } from '@angular/flex-layout'
-import { GetNotifiedComponent } from './components/web/get-notified/get-notified.component';
-import { PartnersComponent } from './components/partners/partners.component'
+import { SignupComponent } from './modals/signup/signup.component'
+import { HttpClientModule } from '@angular/common/http'
+import { MatSnackBarModule } from '@angular/material/snack-bar'
 
 @NgModule({
   declarations: [
@@ -58,6 +54,7 @@ import { PartnersComponent } from './components/partners/partners.component'
     ServiceWorkerModule.register('/ngsw-worker.js', {
       enabled: environment.production
     }),
+    HttpClientModule,
     SharedModule,
     FlexLayoutModule,
     MatToolbarModule,
@@ -69,6 +66,7 @@ import { PartnersComponent } from './components/partners/partners.component'
     MatDialogModule,
     MatInputModule,
     MatExpansionModule,
+    MatSnackBarModule,
     MatCardModule,
     MatTabsModule,
     ReactiveFormsModule

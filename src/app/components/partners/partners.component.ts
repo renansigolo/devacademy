@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-partners',
@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./partners.component.scss']
 })
 export class PartnersComponent implements OnInit {
+  partnersData = [
+    {
+      name: 'DigitalHut',
+      imgUrl: 'assets/imgs/partners/digitalhut.png',
+      webUrl: 'https://digitalhut.com.au/'
+    },
+    {
+      name: 'Live Design',
+      imgUrl: 'assets/imgs/partners/live-design.png',
+      webUrl: 'https://livedesign.com.br'
+    }
+  ]
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
