@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "devacademyau"
+    "default": "devacademyau-staging",
+    "staging": "devacademyau-staging",
+    "production": "devacademyau"
   }
 }

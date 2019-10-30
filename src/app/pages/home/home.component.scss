@@ -1,30 +1,131 @@
-.main {
-  img:first-child {
-    max-height: 60vh;
-    width: 100vw;
+@import 'src/assets/scss/devacademy-theme/mixins';
+
+.subscribe {
+  align-items: center;
+  background-image: url('assets/imgs/home/bg-banner.jpg');
+  background-size: cover;
+  color: var(--light);
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  justify-content: space-evenly;
+  min-width: 40vw;
+
+  &__heading {
+    margin: 5%;
+    max-width: 500px;
+
+    h1,
+    p {
+      margin: 5px 0;
+    }
+
+    h1 {
+      font: 400 34px/40px Nunito, san-serif;
+    }
+
+    .logo-decoration {
+      color: var(--accent);
+      font-weight: 700;
+    }
   }
 
-  .btn {
-    border-radius: 0;
-    padding: 1rem;
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 5%;
+    max-width: 92vw;
+    min-height: 280px;
+
+    mat-card {
+      background: #f3f3f3eb;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      max-width: 500px;
+      min-height: 260px;
+      padding: 32px;
+    }
+
+    mat-card-title {
+      color: var(--dark);
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    mat-card-subtitle {
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      line-height: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .row-name {
+      display: flex;
+      justify-content: space-between;
+
+      > * {
+        width: 48%;
+      }
+    }
+
+    .row-email {
+      display: flex;
+      flex-direction: column;
+
+      > * {
+        width: 100%;
+      }
+    }
+
+    .loading,
+    .email-confirmation {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      img {
+        height: 152px;
+        width: auto;
+      }
+    }
+  }
+
+  .limit-width {
+    max-width: 45vh;
+  }
+
+  @media screen and (min-width: 769px) {
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 
-.card {
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
+#partners {
+  @extend %section-title;
+  background-color: var(--light);
 
-  .card-img-top {
-    border-radius: 0;
-    transition: 0.5s;
+  .partners-content {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      margin: 1%;
+    }
   }
 
-  .card-img-top:hover {
-    box-shadow: 0 10px 15px #999;
+  img {
+    max-height: 30vh;
+    max-width: 100%;
   }
+}
 
-  .card-body {
-    padding: 1.25rem 0;
+@media only screen and (min-width: 768px) {
+  #partners .partners-content {
+    flex-direction: row;
   }
 }

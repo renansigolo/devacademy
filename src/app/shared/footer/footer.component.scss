@@ -1,19 +1,13 @@
-@import 'src/assets/scss/variables';
-
 footer {
-  background-color: $bg-dark;
-  color: $light;
+  background-color: var(--dark);
+  color: var(--light);
   display: flex;
   flex-direction: column;
-  padding: 2vh 10%;
+  padding: 2vh 5%;
 
   h2 {
     font-size: 1.2em;
     font-weight: 500;
-  }
-
-  div:first-child {
-    margin-bottom: 20px;
   }
 
   img {
@@ -32,10 +26,29 @@ footer {
   }
 
   a {
-    color: $light;
+    color: var(--light);
+    text-decoration: none;
   }
 
-  @media screen and (min-width: $tablet) {
+  .social-media {
+    ul {
+      color: var(--light);
+      display: flex;
+    }
+
+    img {
+      height: 40px;
+      margin: 5px;
+      opacity: 0.9;
+
+      &:hover {
+        opacity: 0.7;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  @media screen and (min-width: 769px) {
     flex-direction: row;
     justify-content: space-between;
 
