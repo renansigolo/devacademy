@@ -1,6 +1,3 @@
-// Import Nunito Font
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600');
-
 // Import Angular Material Theme
 @import 'src/assets/scss/angular-material-theme';
 
@@ -11,65 +8,23 @@
 // Override the typography in the core CSS.
 @include mat-core($devacademy-typography);
 
-// Import Bootstrap Theme
-@import 'src/assets/scss/bootstrap-theme';
+:root {
+  --primary: #424242;
+  --accent: #d32f2f;
+  --light: #fff;
+  --light-grey: #a2a2a2;
+  --dark: #212121;
+  --bg-grey: #fafafa;
+}
 
-// Styles to General Elements
 html,
 body {
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }
 
 body {
-  font-size: 18px;
+  font-family: Nunito, 'Helvetica Neue', sans-serif;
   margin: 0;
-}
-
-/*h2 {
-  font-size: 1.8em;
-   margin-bottom: 4rem;
-  padding: 0 2%;
-  position: relative;
-  text-align: center;
-  z-index: 1; 
-}*/
-
-// h2 span {
-//   background: map-get($theme-colors, bg-gray);
-//   font-weight: bold;
-//   padding: 0 15px;
-// }
-
-/* h2::before {
-  border-top: 2px solid #dfdfdf;
-  bottom: 0;
-  // content: '';
-  left: 0;
-  margin: 0 auto;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  width: 100%;
-  z-index: -1;
-} */
-
-h5,
-h6 {
-  font-weight: bold;
-}
-
-.form-control {
-  input,
-  textarea {
-    border-left: 0;
-    border-radius: 0;
-  }
-}
-
-.input-group-text {
-  background-color: #fff !important;
-}
-
-.btn {
-  border-radius: 0;
 }

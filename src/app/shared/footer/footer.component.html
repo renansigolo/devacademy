@@ -1,6 +1,9 @@
 <footer>
   <div>
-    <img src="assets/imgs/brand/logos/logo-white.svg" />
+    <img
+      src="assets/imgs/branding/logo-devacademy-white.svg"
+      alt="DevAcademy Logo"
+    />
     <p>
       DevAcademy is more than a school, we are educating for the future. We
       create immersive experiences with a focus on people. We believe in the
@@ -10,51 +13,39 @@
 
   <div>
     <h2>DevAcademy</h2>
-    <nav>
-      <ul>
-        <!-- <li>
-          <a href="https://www.youtube.com/watch?v=3aT61IK3VEY" target="_blank">
-            About DevAcademy
-          </a>
-        </li> -->
-        <li>
-          <a
-            href="mailto:renan@devacademy.com.au?Subject=Become a DevAcademy Instructor"
-            target="_top"
-          >
-            Become an instructor
-          </a>
-        </li>
-        <li>
-          <a href="https://goo.gl/maps/W4fYKWVb1GJ2" target="_blank">
-            Location
-          </a>
-        </li>
-        <!-- <li>
-              <a href="https://blog.DevAcademy.tech/" target="_blank">Blog</a>
-            </li> -->
-      </ul>
-    </nav>
+    <ul>
+      <li>
+        <a
+          href="mailto:renan@devacademy.com.au?Subject=Become a DevAcademy Instructor"
+          target="_top"
+        >
+          Become an instructor
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://goo.gl/maps/W4fYKWVb1GJ2"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Location
+        </a>
+      </li>
+    </ul>
   </div>
-  <div>
+  <div class="social-media">
     <h2>Get in touch</h2>
-    <nav>
-      <ul>
-        <li>
-          <a
-            href="mailto:hello@devacademy.com.au?Subject=Contact Website"
-            target="_top"
-          >
-            hello@devacademy.com.au
-          </a>
-        </li>
-
-        <li *ngFor="let social of socialMedia">
-          <a href="{{ social.path }}" target="_blank">
-            {{ social.name }}
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <ul>
+      <li *ngFor="let social of socialMedia">
+        <a href="{{ social.path }}" target="_blank" rel="noreferrer noopener">
+          <img
+            src="assets/imgs/social-media/flat/{{
+              social.name | lowercase
+            }}.svg"
+            alt="{{ social.name }} Icon"
+          />
+        </a>
+      </li>
+    </ul>
   </div>
 </footer>

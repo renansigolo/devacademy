@@ -1,195 +1,107 @@
-<!-- <app-navbar></app-navbar> -->
+<section class="subscribe">
+  <div class="subscribe__heading">
+    <h1>
+      <span class="logo-decoration">Dev</span>
+      Academy
+    </h1>
+    <p class="mat-headline">
+      We provide immersive courses in technology, enabling people to understand
+      and transform the world around them.
+    </p>
+  </div>
 
-<app-get-notified></app-get-notified>
-<!-- <section class="main">
-	<div class="container mt-5">
-		<div>
-			<img class="img-fluid" src="assets/imgs/home/main.jpg" />
-			<h3 class="mt-3 ">Education to reinvent your future.</h3>
-			<p>
-				Learn the necessary skills to re-write your carrer preparing yourself to
-				new challenges. Yes, you can learn anything you want!
-			</p>
-			<a href="#journey" class="btn btn-primary btn-block">Find your course</a>
-		</div>
+  <div class="subscribe__card">
+    <!-- Subscribe Form -->
+    <mat-card>
+      <mat-card-title-group *ngIf="!formStatus || formStatus === 'loading'">
+        <mat-card-title>Get Notified</mat-card-title>
+        <mat-card-subtitle>
+          Fill out your details below to get notified of our upcoming events you
+          can attend for a variety of hands-on workshops for non-developers and
+          beginners.
+        </mat-card-subtitle>
+      </mat-card-title-group>
 
-		<div class="d-flex justify-content-between">
-			<div class="m-3">
-				<img class="img-fluid" src="assets/imgs/home/Home1.jpg" />
-				<div class="mt-3">
-					<h5>Learn and transform yourself with DevAcademy</h5>
-					<p>
-						Our methodology is recognized by companies like Google, Facebook and
-						MIT.
-					</p>
-				</div>
-			</div>
-			<div class="m-3">
-				<img class="img-fluid" src="assets/imgs/home/home021.jpg" />
-				<div class="mt-3">
-					<h5>Lead agile teams</h5>
-					<p>
-						How to turn your traditional team into a high-capacity delivery
-						team?
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section> -->
+      <mat-card-content *ngIf="!formStatus">
+        <form
+          [formGroup]="getNotifiedForm"
+          (ngSubmit)="submitGetNotifiedForm()"
+        >
+          <div class="row-name">
+            <mat-form-field>
+              <input
+                matInput
+                type="text"
+                placeholder="First Name"
+                formControlName="firstName"
+              />
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                type="text"
+                placeholder="Last Name"
+                formControlName="lastName"
+              />
+            </mat-form-field>
+          </div>
 
-<!-- <section class="container">
-	<h2><span>Understand the DevAcademy methodology with free classes</span></h2>
-	<div
-		class="d-flex flex-column align-items-center flex-md-row justify-content-md-around"
-	>
-		<div class="card m-1" style="width: 18rem;">
-			<img
-				class="card-img-top"
-				src="http://via.placeholder.com/640x320"
-				alt="Card image cap"
-			/>
-			<div class="card-body">
-				<h5 class="card-title ">Card title</h5>
-				<a href="#" class="btn btn-block btn-primary">Go somewhere</a>
-			</div>
-		</div>
+          <div class="row-email">
+            <mat-form-field>
+              <input
+                matInput
+                type="email"
+                placeholder="Email Address"
+                formControlName="email"
+              />
+            </mat-form-field>
+          </div>
 
-		<div class="card m-1" style="width: 18rem;">
-			<img
-				class="card-img-top"
-				src="http://via.placeholder.com/640x320"
-				alt="Card image cap"
-			/>
-			<div class="card-body">
-				<h5 class="card-title ">Card title</h5>
-				<a href="#" class="btn btn-block btn-primary">Go somewhere</a>
-			</div>
-		</div>
+          <button mat-flat-button color="accent" type="submit">
+            Notify Me
+          </button>
+        </form>
+      </mat-card-content>
 
-		<div class="card m-1" style="width: 18rem;">
-			<img
-				class="card-img-top"
-				src="http://via.placeholder.com/640x320"
-				alt="Card image cap"
-			/>
-			<div class="card-body">
-				<h5 class="card-title ">Card title</h5>
-				<a href="#" class="btn btn-block btn-primary">Go somewhere</a>
-			</div>
-		</div>
-	</div>
+      <mat-card-content class="loading" *ngIf="formStatus === 'loading'">
+        <mat-progress-spinner
+          class="loading-spinner"
+          color="accent"
+          mode="indeterminate"
+        ></mat-progress-spinner>
+      </mat-card-content>
 
-	<div class="d-flex justify-content-center mt-5">
-		<a class="btn btn-primary p-2" href="#">More free content</a>
-	</div>
-</section> -->
+      <!-- Form Submitted -->
+      <mat-card-title-group
+        class="email-confirmation"
+        *ngIf="formStatus === 'submitted'"
+      >
+        <mat-card-title>Thank you!</mat-card-title>
+        <mat-card-subtitle>
+          You've been successfully subscribed.
+        </mat-card-subtitle>
+        <img
+          src="assets/imgs/home/checkmark.gif"
+          alt="Email Confirmation Checkmark"
+        />
+      </mat-card-title-group>
+    </mat-card>
+  </div>
+</section>
 
-<!-- <section class="container mb-5 mt-5" id="journey">
-	<h2><span class="">Chose your journey</span></h2>
+<app-featured-courses></app-featured-courses>
 
-	<div
-		class="d-flex text-center flex-column align-items-center flex-md-row justify-content-md-around"
-	>
-		<button type="button" class="m-2 btn btn-primary btn-lg btn-block">
-			<div class="d-flex justify-content-between">
-				<div class="d-flex flex-column pl-2">
-					<h5 class="pt-2 text-left">UX Design</h5>
-					<small class="pb-2">Design Thinking, User Research...</small>
-				</div>
-				<div class="ml-auto p-2 align-self-center">
-					<i class="material-icons">keyboard_arrow_right</i>
-				</div>
-			</div>
-		</button>
+<section id="partners">
+  <h2>Our Partners</h2>
 
-		<button type="button" class="m-2 btn btn-primary btn-lg btn-block">
-			<div class="d-flex justify-content-between">
-				<div class="d-flex flex-column pl-2">
-					<h5 class="pt-2 text-left">Marketing Digital</h5>
-					<small class="pb-2">Growth Hacking, Google Analytics...</small>
-				</div>
-				<div class="ml-auto p-2 align-self-center">
-					<i class="material-icons">keyboard_arrow_right</i>
-				</div>
-			</div>
-		</button>
-	</div>
-
-	<div
-		class="d-flex text-center flex-column align-items-center flex-md-row justify-content-md-around"
-	>
-		<button type="button" class="m-2 btn btn-primary btn-lg btn-block">
-			<div class="d-flex justify-content-between">
-				<div class="d-flex flex-column pl-2">
-					<h5 class="pt-2 text-left">UX Design</h5>
-					<small class="pb-2">Design Thinking, User Research...</small>
-				</div>
-				<div class="ml-auto p-2 align-self-center">
-					<i class="material-icons">keyboard_arrow_right</i>
-				</div>
-			</div>
-		</button>
-
-		<button type="button" class="m-2 btn btn-primary btn-lg btn-block">
-			<div class="d-flex justify-content-between">
-				<div class="d-flex flex-column pl-2">
-					<h5 class="pt-2 text-left">Marketing Digital</h5>
-					<small class="pb-2">Growth Hacking, Google Analytics...</small>
-				</div>
-				<div class="ml-auto p-2 align-self-center">
-					<i class="material-icons">keyboard_arrow_right</i>
-				</div>
-			</div>
-		</button>
-	</div>
-</section> -->
-
-<!-- <section class="container mb-5" id="info-content">
-	<h2><span class="">Forming Professionals of the Future</span></h2>
-
-	<div class="row mt-3">
-		<div class="col-12 col-md-6 mb-3">
-			<img class="img-fluid" src="assets/imgs/home/transformeSuaEmpresa.jpg" />
-		</div>
-		<div class="col-12 col-md-6">
-			<h3 class="">
-				Transform your business, build agile teams, and create processes that
-				drive innovation
-			</h3>
-			<p>
-				DevAcademy is more than a school, we are educating for the future. We
-				create immersive experiences with a focus on people. We believe in the
-				transformation that knowledge can bring to anyone at any time. Watch the
-				video and come with us transforming your career and your future.
-			</p>
-		</div>
-	</div>
-</section> -->
-
-<!-- <section class="container mb-5" id="info-content">
-	<h2><span class="">Digitize your workforce</span></h2>
-
-	<div class="row mt-3">
-		<div class="col-12 col-md-6 mb-3">
-			<img class="img-fluid" src="assets/imgs/home/digitalize.jpg" />
-		</div>
-		<div class="col-12 col-md-6">
-			<h3 class="">Digitize your talents and accelerate innovation</h3>
-			<p>
-				Want to know how we can transform your business? DevAcademy conducts
-				in-company training and also develops specific projects for the demand
-				that your company needs. Contact us to find out what we can do together
-				within your company.
-			</p>
-		</div>
-	</div>
-</section> -->
-
-<app-courses></app-courses>
-
-<!-- <app-youtube></app-youtube> -->
-
-<!-- <app-awards></app-awards> -->
-
-<app-footer></app-footer>
+  <div class="partners-content">
+    <a
+      href="{{ partner.webUrl }}"
+      *ngFor="let partner of partnersData"
+      target="_blank"
+      rel="noreferrer noopener"
+    >
+      <img src="{{ partner.imgUrl }}" alt="{{ partner.name }} logo" />
+    </a>
+  </div>
+</section>

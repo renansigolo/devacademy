@@ -1,6 +1,6 @@
 # Devacademy
 
-DevAcademy website
+Source code for the DevAcademy website
 
 ## Getting Started
 

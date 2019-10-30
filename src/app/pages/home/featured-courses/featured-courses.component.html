@@ -1,0 +1,32 @@
+<section class="featured-courses">
+  <h2>Upcoming Courses</h2>
+  <div class="featured-courses__container">
+    <ng-container *ngIf="courses; else noCourses">
+      <mat-card class="card" *ngFor="let course of courses">
+        <img mat-card-image [src]="course.imageUrl" alt="Course Image" />
+
+        <mat-card-title-group>
+          <mat-card-title>{{ course.title }}</mat-card-title>
+          <mat-card-subtitle>{{ course.level }}</mat-card-subtitle>
+        </mat-card-title-group>
+
+        <mat-card-content>
+          <p>{{ course.description | slice: 0:200 }}...</p>
+          <button
+            mat-flat-button
+            color="accent"
+            [routerLink]="['/course/', course.slug]"
+          >
+            Enrol Now
+          </button>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+
+    <ng-template #noCourses>
+      <div class="no-courses">
+        <h2>More courses are coming soon...</h2>
+      </div>
+    </ng-template>
+  </div>
+</section>

@@ -1,25 +1,33 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
+import { Observable } from 'rxjs'
+import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout'
+import { map, shareReplay } from 'rxjs/operators'
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent {
-  courses = [
+export class NavbarComponent implements OnInit {
+  sidenavLinks = [
     {
-      name: 'Build Your First App',
-      path: 'courses/build-your-first-app'
-    },
-    {
-      name: 'Build your first website',
-      path: 'courses/build-your-first-website'
-    },
-    {
-      name: 'Build an app with image recognition',
-      path: 'courses/build-an-app-with-image-recognition'
+      name: 'Home',
+      url: '/'
     }
+    // {
+    //   name: 'Courses',
+    //   url: 'course'
+    // }
   ]
 
-  constructor() {}
+  isHandset$: Observable<boolean> = this.breakpointObserver
+    .observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    )
+
+  constructor(private breakpointObserver: BreakpointObserver) {}
+
+  ngOnInit() {}
 }

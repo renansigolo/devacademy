@@ -29,7 +29,7 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
     const mailOptions = {
       subject: 'DevAcademy - New Subscriber',
       from: '"DevAcademy Website" <no-reply@devacademy.com.au>',
-      to: 'hello@devacademy.com.au'
+      to: 'renan.sigolo@devacademy.com.au'
     }
 
     // Build Email message.
