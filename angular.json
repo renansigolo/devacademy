@@ -48,7 +48,10 @@
               "src/manifest.webmanifest",
               "src/robots.txt"
             ],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap-grid.min.css",
+              "src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {

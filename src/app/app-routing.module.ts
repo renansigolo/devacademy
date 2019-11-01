@@ -11,7 +11,8 @@ const routes: Routes = [
     path: 'course',
     loadChildren: () =>
       import('@pages/courses/courses.module.ts').then(m => m.CoursesModule)
-  }
+  },
+  { path: '**', component: PageNotFoundComponent }
 ]
 
 @NgModule({
