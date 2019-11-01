@@ -12,7 +12,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('@pages/courses/courses.module.ts').then(m => m.CoursesModule)
   },
-  { path: '**', component: PageNotFoundComponent }
+  {
+    path: '**',
+    loadChildren: () =>
+      import('@pages/home/home.module.ts').then(m => m.HomeModule)
+  }
 ]
 
 @NgModule({
