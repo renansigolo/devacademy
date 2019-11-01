@@ -3,8 +3,7 @@
   <mat-sidenav #drawer class="sidenav" fixedInViewport>
     <mat-toolbar>DevAcademy</mat-toolbar>
     <mat-nav-list *ngFor="let page of sidenavLinks">
-      <a mat-list-item href="{{ page.url }}">{{ page.name }}</a>
-      <!-- <a mat-list-item href="{{ page.url }}">{{ page.name || titlecase }}</a> -->
+      <a mat-list-item href="{{ page.url }}">{{ page.name | titlecase }}</a>
     </mat-nav-list>
   </mat-sidenav>
 

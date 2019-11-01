@@ -11,6 +11,11 @@ const routes: Routes = [
     path: 'course',
     loadChildren: () =>
       import('@pages/courses/courses.module.ts').then(m => m.CoursesModule)
+  },
+  {
+    path: '**',
+    loadChildren: () =>
+      import('@pages/home/home.module.ts').then(m => m.HomeModule)
   }
 ]
 
