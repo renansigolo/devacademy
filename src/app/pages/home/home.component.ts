@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http'
 import { Component, OnInit } from '@angular/core'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar'
+import { environment } from '@environments/environment'
 
 @Component({
   selector: 'app-home',
@@ -37,7 +38,7 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   submitGetNotifiedForm() {
     if (!this.getNotifiedForm.valid) {
@@ -54,14 +55,17 @@ export class HomeComponent implements OnInit {
         return
       })
       .catch(error => {
+        this.formStatus = null
+        this.showSnackBar(error.message)
         return console.error(error)
       })
+      .finally()
   }
 
   async sendEmail() {
     return this.http
       .post<any>(
-        'https://us-central1-devacademyau.cloudfunctions.net/sendEmail',
+        `${environment.cloudFunctionUrl}/sendEmail`,
         {
           firstName: this.getNotifiedForm.get('firstName').value,
           lastName: this.getNotifiedForm.get('lastName').value,

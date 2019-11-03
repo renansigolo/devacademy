@@ -27,7 +27,7 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
     }
 
     const mailOptions = {
-      subject: 'DevAcademy - New Subscriber',
+      subject: 'DevAcademy - New Subscriber (Test)',
       from: '"DevAcademy Website" <no-reply@devacademy.com.au>',
       to: 'renan@devacademy.com.au'
     }
@@ -41,13 +41,13 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
     <p><strong>Email:</strong> ${formPayload.email}</p>
     `
 
-    const textMessage = `
-    New DevAcademy Subscriber
-    Name: ${formPayload.firstName} ${formPayload.lastName}
-    First Name: ${formPayload.firstName}
-    Last Name: ${formPayload.lastName}
-    Email: ${formPayload.email}
-    `
+    // const textMessage = `
+    // New DevAcademy Subscriber
+    // Name: ${formPayload.firstName} ${formPayload.lastName}
+    // First Name: ${formPayload.firstName}
+    // Last Name: ${formPayload.lastName}
+    // Email: ${formPayload.email}
+    // `
 
     mailOptions.html = htmlMessage
     mailOptions.text = textMessage

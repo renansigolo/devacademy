@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  version: require('../../package.json').version,
   firebase: {
     apiKey: 'AIzaSyDYI-MV5Y38DvpRa7K032IjUsSCzLYQ0Bs',
     authDomain: 'devacademyau-staging.firebaseapp.com',
@@ -12,7 +13,8 @@ export const environment = {
     storageBucket: 'devacademyau-staging.appspot.com',
     messagingSenderId: '690269475120',
     appId: '1:690269475120:web:a13bad22da8e132e0e38f5'
-  }
+  },
+  cloudFunctionUrl: 'https://us-central1-devacademyau-staging.cloudfunctions.net'
 }
 
 /*
