@@ -40,7 +40,7 @@
     "@angular/material": "^8.2.3",
     "@angular/platform-browser": "~8.2.13",
     "@angular/platform-browser-dynamic": "~8.2.13",
-    "@angular/pwa": "^0.803.15",
+    "@angular/pwa": "^0.803.17",
     "@angular/router": "~8.2.13",
     "@angular/service-worker": "~8.2.13",
     "firebase": "^7.2.3",
