@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
+import { Component, OnInit } from '@angular/core'
+import { AngularFireAuth } from '@angular/fire/auth'
 
 @Component({
   selector: 'app-login',
@@ -7,12 +7,11 @@ import { AngularFireAuth } from '@angular/fire/auth';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
-  constructor(public afAuth: AngularFireAuth) { }
+  constructor(public afAuth: AngularFireAuth) {}
 
   ngOnInit() {
-
-    console.log('this', this.afAuth.auth )
+    this.afAuth.user.subscribe(ref => {
+      console.log('TCL: LoginComponent -> ngOnInit -> ref', ref)
+    })
   }
-
 }

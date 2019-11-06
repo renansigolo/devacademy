@@ -27,7 +27,10 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
       email: req.body.email
     }
 
-    fs.readFile('templates/welcome.html', { encoding: 'utf-8' }, function (err, data) {
+    fs.readFile('templates/welcome.html', { encoding: 'utf-8' }, function(
+      err,
+      data
+    ) {
       // data = data.toString()
 
       const textMessage = `
@@ -56,7 +59,8 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
       }
 
       try {
-        return mailTransport.sendMail(mailOptions)
+        return mailTransport
+          .sendMail(mailOptions)
           .then(() => res.status(200).end())
       } catch (error) {
         console.error('There was an error while sending the email:', error)
@@ -71,6 +75,5 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
     //     console.error('There was an error while sending the email:', error)
     //     res.status(500).send(error)
     //   })
-
   })
 })

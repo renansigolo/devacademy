@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar'
 import { environment } from '@environments/environment'
+import { SnackService } from '@services/snack.service'
 
 @Component({
   selector: 'app-home',
@@ -29,7 +30,7 @@ export class HomeComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
-    private snackBar: MatSnackBar
+    private snack: SnackService
   ) {
     this.getNotifiedForm = this.fb.group({
       firstName: ['', Validators.required],
@@ -38,11 +39,11 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  ngOnInit() { }
+  ngOnInit() {}
 
   submitGetNotifiedForm() {
     if (!this.getNotifiedForm.valid) {
-      this.showSnackBar(`Ops, something isn't right`)
+      this.snack.showInfo(`Ops, something isn't right`)
       return console.error('Form is not valid')
     }
 
@@ -56,7 +57,7 @@ export class HomeComponent implements OnInit {
       })
       .catch(error => {
         this.formStatus = null
-        this.showSnackBar(error.message)
+        this.snack.showInfo(error.message)
         return console.error(error)
       })
       .finally()
@@ -64,14 +65,11 @@ export class HomeComponent implements OnInit {
 
   async sendEmail() {
     return this.http
-      .post<any>(
-        `${environment.cloudFunctionUrl}/sendEmail`,
-        {
-          firstName: this.getNotifiedForm.get('firstName').value,
-          lastName: this.getNotifiedForm.get('lastName').value,
-          email: this.getNotifiedForm.get('email').value
-        }
-      )
+      .post<any>(`${environment.cloudFunctionUrl}/sendEmail`, {
+        firstName: this.getNotifiedForm.get('firstName').value,
+        lastName: this.getNotifiedForm.get('lastName').value,
+        email: this.getNotifiedForm.get('email').value
+      })
       .toPromise()
     // .pipe(
     //   catchError((error: HttpErrorResponse) => {
@@ -82,14 +80,5 @@ export class HomeComponent implements OnInit {
     // .subscribe(() => {
     //   return this.showSnackBar(`You've been successfully subscribed`)
     // })
-  }
-
-  showSnackBar(msg: string) {
-    const config: MatSnackBarConfig = {
-      duration: 5000,
-      horizontalPosition: 'right',
-      verticalPosition: 'top'
-    }
-    this.snackBar.open(msg, 'Dismiss', config)
   }
 }

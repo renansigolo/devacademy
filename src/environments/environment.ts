@@ -14,7 +14,8 @@ export const environment = {
     messagingSenderId: '690269475120',
     appId: '1:690269475120:web:a13bad22da8e132e0e38f5'
   },
-  cloudFunctionUrl: 'https://us-central1-devacademyau-staging.cloudfunctions.net'
+  cloudFunctionUrl:
+    'https://us-central1-devacademyau-staging.cloudfunctions.net'
 }
 
 /*

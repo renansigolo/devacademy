@@ -2,8 +2,23 @@
   <!-- SIDENAV -->
   <mat-sidenav #drawer class="sidenav" fixedInViewport>
     <mat-toolbar>DevAcademy</mat-toolbar>
-    <mat-nav-list *ngFor="let page of sidenavLinks">
-      <a mat-list-item [routerLink]="page.url" (click)="drawer.close()">{{ page.name | titlecase }}</a>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/" (click)="drawer.close()">Home</a>
+      <a
+        mat-list-item
+        routerLink="login"
+        (click)="drawer.close()"
+        *ngIf="!(afAuth.authState | async)"
+      >
+        Login
+      </a>
+      <div *ngIf="afAuth.authState | async as user">
+        <img mat-card-avatar src="{{ user.photoURL }}" />
+        <a mat-list-item routerLink="login" (click)="drawer.close()">
+          Dashboard
+        </a>
+        <a mat-list-item routerLink="login" (click)="drawer.close()">Logout</a>
+      </div>
     </mat-nav-list>
   </mat-sidenav>
 
@@ -33,7 +48,19 @@
         </button>
 
         <div *ngIf="!(isHandset$ | async)">
-          <a mat-button routerLink="/login" routerLinkActive="active">Login</a>
+          <a
+            mat-button
+            routerLink="login"
+            routerLinkActive="active"
+            *ngIf="!(afAuth.authState | async)"
+          >
+            Login
+          </a>
+          <div *ngIf="afAuth.authState | async as user">
+            <a mat-button routerLink="login" routerLinkActive="active">
+              <img mat-card-avatar src="{{ user.photoURL }}" />
+            </a>
+          </div>
         </div>
       </mat-toolbar-row>
     </mat-toolbar>

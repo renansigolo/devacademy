@@ -9,5 +9,5 @@ import { environment } from '@environments/environment'
 export class AppComponent {
   constructor() {
     console.log(`v.${environment.version}`)
-   }
+  }
 }

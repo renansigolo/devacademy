@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import { Observable } from 'rxjs'
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout'
 import { map, shareReplay } from 'rxjs/operators'
+import { AngularFireAuth } from '@angular/fire/auth'
 
 @Component({
   selector: 'app-navbar',
@@ -9,21 +10,6 @@ import { map, shareReplay } from 'rxjs/operators'
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  sidenavLinks = [
-    {
-      name: 'Home',
-      url: '/'
-    },
-    {
-      name: 'Login',
-      url: 'login'
-    }
-    // {
-    //   name: 'Courses',
-    //   url: 'course'
-    // }
-  ]
-
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
     .pipe(
@@ -31,7 +17,10 @@ export class NavbarComponent implements OnInit {
       shareReplay()
     )
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    public afAuth: AngularFireAuth
+  ) {}
 
   ngOnInit() {}
 }

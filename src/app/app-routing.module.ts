@@ -17,7 +17,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('@pages/courses/courses.module.ts').then(m => m.CoursesModule)
   },
-  { path: '',   redirectTo: '', pathMatch: 'full' },
+  { path: '', redirectTo: '', pathMatch: 'full' },
   {
     path: '**',
     loadChildren: () =>
