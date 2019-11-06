@@ -3,7 +3,7 @@
   <mat-sidenav #drawer class="sidenav" fixedInViewport>
     <mat-toolbar>DevAcademy</mat-toolbar>
     <mat-nav-list *ngFor="let page of sidenavLinks">
-      <a mat-list-item href="{{ page.url }}">{{ page.name | titlecase }}</a>
+      <a mat-list-item [routerLink]="page.url" (click)="drawer.close()">{{ page.name | titlecase }}</a>
     </mat-nav-list>
   </mat-sidenav>
 
@@ -20,7 +20,7 @@
           routerLink="/"
         />
 
-        <!-- <span class="spacer"></span>
+        <span class="spacer"></span>
 
         <button
           type="button"
@@ -30,11 +30,11 @@
           *ngIf="isHandset$ | async"
         >
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-        </button> -->
+        </button>
 
-        <!-- <div *ngIf="!(isHandset$ | async)">
-          <a mat-button routerLink="/">Home</a>
-        </div> -->
+        <div *ngIf="!(isHandset$ | async)">
+          <a mat-button routerLink="/login" routerLinkActive="active">Login</a>
+        </div>
       </mat-toolbar-row>
     </mat-toolbar>
 

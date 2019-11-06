@@ -13,6 +13,10 @@ export class NavbarComponent implements OnInit {
     {
       name: 'Home',
       url: '/'
+    },
+    {
+      name: 'Login',
+      url: 'login'
     }
     // {
     //   name: 'Courses',

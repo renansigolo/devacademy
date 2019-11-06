@@ -8,11 +8,15 @@ import { MatListModule } from '@angular/material/list'
 import { MatSnackBarModule } from '@angular/material/snack-bar'
 import { NavbarComponent } from './navbar/navbar.component'
 import { MatCardModule } from '@angular/material/card'
+import { RouterModule } from '@angular/router'
+import { FooterComponent } from './footer/footer.component'
+import { GoogleSigninDirective } from './google-signin.directive'
 
-const components = [NavbarComponent]
+const components = [NavbarComponent, FooterComponent, GoogleSigninDirective]
 
 const modules = [
   CommonModule,
+  RouterModule,
   MatToolbarModule,
   MatSidenavModule,
   MatButtonModule,
