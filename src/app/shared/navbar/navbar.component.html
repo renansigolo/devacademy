@@ -13,7 +13,7 @@
         Login
       </a>
       <div *ngIf="afAuth.authState | async as user">
-        <img mat-card-avatar src="{{ user.photoURL }}" />
+        <mat-divider></mat-divider>
         <a mat-list-item routerLink="login" (click)="drawer.close()">
           Dashboard
         </a>
