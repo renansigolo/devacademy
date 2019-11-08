@@ -1,6 +1,6 @@
-<section class="featured-courses">
+<section class="card-course">
   <h2>Upcoming Courses</h2>
-  <div class="featured-courses__container">
+  <div class="card-course__container">
     <ng-container *ngIf="courses; else noCourses">
       <mat-card class="card" *ngFor="let course of courses">
         <img mat-card-image [src]="course.imageUrl" alt="Course Image" />

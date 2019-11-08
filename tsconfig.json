@@ -13,8 +13,6 @@
     "target": "es2015",
     "paths": {
       "@environments/*": ["environments/*"],
-      "@pages/*": ["app/pages/*"],
-      "@components/*": ["app/components/*"],
       "@services/*": ["app/services/*"]
     },
     "typeRoots": ["node_modules/@types"],

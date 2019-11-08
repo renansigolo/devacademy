@@ -1,16 +1,15 @@
-import { HttpClient } from '@angular/common/http'
 import { Component, OnInit } from '@angular/core'
-import { FormBuilder, FormGroup, Validators } from '@angular/forms'
-import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar'
-import { environment } from '@environments/environment'
+import { FormGroup, FormBuilder, Validators } from '@angular/forms'
+import { HttpClient } from '@angular/common/http'
 import { SnackService } from '@services/snack.service'
+import { environment } from '@environments/environment'
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-home-page',
+  templateUrl: './home-page.component.html',
+  styleUrls: ['./home-page.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomePageComponent implements OnInit {
   getNotifiedForm: FormGroup
   formStatus: null | 'loading' | 'submitted' = null
 

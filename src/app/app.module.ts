@@ -1,25 +1,27 @@
-import { LayoutModule } from '@angular/cdk/layout'
-import { HttpClientModule } from '@angular/common/http'
+import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
+import { environment } from '@environments/environment'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+
+// App Modules
+import { AppComponent } from './app.component'
+import { AppRoutingModule } from './app-routing.module'
+import { HomePageComponent } from './home-page/home-page.component'
+import { SharedModule } from './shared/shared.module'
+import { HttpClientModule } from '@angular/common/http'
+import { ServiceWorkerModule } from '@angular/service-worker'
+
+// Firebase imports
 import { AngularFireModule } from '@angular/fire'
 import { AngularFireAuthModule } from '@angular/fire/auth'
 import { AngularFirestoreModule } from '@angular/fire/firestore'
-import { BrowserModule } from '@angular/platform-browser'
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { ServiceWorkerModule } from '@angular/service-worker'
-import { environment } from '@environments/environment'
-import { AppRoutingModule } from './app-routing.module'
-import { AppComponent } from './app.component'
-import { SharedModule } from './shared/shared.module';
-import { EmailLoginComponent } from './user/email-login/email-login.component'
 
 @NgModule({
-  declarations: [AppComponent, EmailLoginComponent],
+  declarations: [AppComponent, HomePageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    LayoutModule,
     HttpClientModule,
     SharedModule,
     ServiceWorkerModule.register('ngsw-worker.js', {

@@ -1,0 +1,40 @@
+:host {
+  @import 'src/assets/scss/devacademy-theme/mixins';
+
+  .card-course {
+    @extend %section-title;
+    background-color: var(--bg-grey);
+
+    &__container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 30vh;
+
+      .no-courses {
+        align-items: center;
+        display: flex;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 20px;
+        max-width: 400px;
+
+        &:hover {
+          transform: scale(1.05);
+          transition: all 0.5s;
+        }
+      }
+
+      @media screen and (min-width: 769px) {
+        align-items: stretch;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+  }
+}

@@ -1,18 +1,23 @@
-import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { MatToolbarModule } from '@angular/material/toolbar'
+import { NgModule } from '@angular/core'
 import { MatButtonModule } from '@angular/material/button'
-import { MatSidenavModule } from '@angular/material/sidenav'
-import { MatIconModule } from '@angular/material/icon'
-import { MatListModule } from '@angular/material/list'
-import { MatSnackBarModule } from '@angular/material/snack-bar'
-import { NavbarComponent } from './navbar/navbar.component'
 import { MatCardModule } from '@angular/material/card'
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatIconModule } from '@angular/material/icon'
+import { MatInputModule } from '@angular/material/input'
+import { MatListModule } from '@angular/material/list'
+import { MatSidenavModule } from '@angular/material/sidenav'
+import { MatSnackBarModule } from '@angular/material/snack-bar'
+import { MatToolbarModule } from '@angular/material/toolbar'
 import { RouterModule } from '@angular/router'
+import { LayoutModule } from '@angular/cdk/layout'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { ReactiveFormsModule } from '@angular/forms'
 import { FooterComponent } from './footer/footer.component'
-import { GoogleSigninDirective } from './google-signin.directive'
+import { NavbarComponent } from './navbar/navbar.component'
+import { CardCourseComponent } from './card-course/card-course.component'
 
-const components = [NavbarComponent, FooterComponent, GoogleSigninDirective]
+const components = [NavbarComponent, FooterComponent, CardCourseComponent]
 
 const modules = [
   CommonModule,
@@ -22,8 +27,13 @@ const modules = [
   MatButtonModule,
   MatIconModule,
   MatListModule,
+  MatFormFieldModule,
+  MatInputModule,
   MatSnackBarModule,
-  MatCardModule
+  MatCardModule,
+  MatProgressSpinnerModule,
+  ReactiveFormsModule,
+  LayoutModule
 ]
 
 @NgModule({
