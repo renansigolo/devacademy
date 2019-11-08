@@ -10,10 +10,11 @@ import { ServiceWorkerModule } from '@angular/service-worker'
 import { environment } from '@environments/environment'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
-import { SharedModule } from './shared/shared.module'
+import { SharedModule } from './shared/shared.module';
+import { EmailLoginComponent } from './user/email-login/email-login.component'
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, EmailLoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
