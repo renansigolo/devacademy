@@ -61,26 +61,26 @@ export class EmailLoginComponent implements OnInit {
   }
 
   async onSubmit() {
-    this.loading = true;
+    this.loading = true
 
-    const email = this.email.value;
-    const password = this.password.value;
+    const email = this.email.value
+    const password = this.password.value
 
     try {
       if (this.isLogin) {
-        await this.afAuth.auth.signInWithEmailAndPassword(email, password);
+        await this.afAuth.auth.signInWithEmailAndPassword(email, password)
       }
       if (this.isSignup) {
-        await this.afAuth.auth.createUserWithEmailAndPassword(email, password);
+        await this.afAuth.auth.createUserWithEmailAndPassword(email, password)
       }
       if (this.isPasswordReset) {
-        await this.afAuth.auth.sendPasswordResetEmail(email);
-        this.serverMessage = 'Check your email';
+        await this.afAuth.auth.sendPasswordResetEmail(email)
+        this.serverMessage = 'Check your email'
       }
     } catch (err) {
-      this.serverMessage = err;
+      this.serverMessage = err
     }
 
-    this.loading = false;
+    this.loading = false
   }
 }

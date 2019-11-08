@@ -18,14 +18,16 @@
   display: inline-flex;
   flex-flow: row-reverse;
 }
+
 .example-card {
-  max-width: 400px;
   margin: 5px;
+  max-width: 400px;
 }
 
 .example-spacer {
   flex: 1 1 auto;
 }
+
 .user-info {
   padding-left: 1rem;
 
@@ -47,6 +49,7 @@
 .levels {
   display: flex;
   flex-direction: column;
+
   &__cards {
     display: flex;
     justify-content: space-around;

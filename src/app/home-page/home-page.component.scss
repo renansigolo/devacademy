@@ -1,6 +1,4 @@
 :host {
-  @import 'src/assets/scss/devacademy-theme/mixins';
-
   .subscribe {
     align-items: center;
     background-image: url('assets/imgs/home/bg-banner.jpg');
@@ -107,7 +105,7 @@
   }
 
   #partners {
-    @extend %section-title;
+    // @extend %section-title;
     background-color: var(--light);
 
     .partners-content {
