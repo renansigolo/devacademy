@@ -1,1 +1,142 @@
-<p>login-page works!</p>
+<div *ngIf="!(afAuth.authState | async)">
+  <h1>Login</h1>
+
+  <button mat-raised-button appGoogleSignin>
+    Login with Google
+  </button>
+</div>
+
+<div *ngIf="afAuth.authState | async as user" class="logout">
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <img mat-card-avatar src="{{ user.photoURL }}" />
+      <div class="user-info">
+        <h2>{{ user.displayName }}</h2>
+        <span>{{ user.email }}</span>
+      </div>
+      <span class="example-spacer"></span>
+
+      <span>
+        235
+        <br />
+        XP
+      </span>
+      <!-- <button mat-stroked-button (click)="afAuth.auth.signOut()">Logout</button> -->
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <div class="tabs">
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+      <mat-tab label="Today">
+        <div class="levels">
+          <h2>Welcome {{ user.displayName }}</h2>
+          <p>You have collected 150xp</p>
+          <mat-progress-bar
+            mode="determinate"
+            value="60"
+            color="warn"
+          ></mat-progress-bar>
+          <p class="next-level">Level 2</p>
+        </div>
+
+        <h2>Start Learning</h2>
+        <mat-progress-spinner
+          class="example-spinner"
+          mode="determinate"
+          value="30"
+        ></mat-progress-spinner>
+
+        <div class="start-learning">
+          <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Coding for Non-Programmers</mat-card-title>
+              <mat-card-subtitle>Beginner</mat-card-subtitle>
+            </mat-card-header>
+            <img
+              mat-card-image
+              src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+              alt="Photo of a Shiba Inu"
+            />
+            <mat-card-content>
+              <p>
+                The Shiba Inu is the smallest of the six original and distinct
+                spitz breeds of dog from Japan. A small, agile dog that copes
+                very well with mountainous terrain, the Shiba Inu was originally
+                bred for hunting.
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button>LIKE</button>
+              <button mat-button>SHARE</button>
+            </mat-card-actions>
+          </mat-card>
+          <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Shiba Inu</mat-card-title>
+              <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+            </mat-card-header>
+            <img
+              mat-card-image
+              src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+              alt="Photo of a Shiba Inu"
+            />
+            <mat-card-content>
+              <p>
+                The Shiba Inu is the smallest of the six original and distinct
+                spitz breeds of dog from Japan. A small, agile dog that copes
+                very well with mountainous terrain, the Shiba Inu was originally
+                bred for hunting.
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button>LIKE</button>
+              <button mat-button>SHARE</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </mat-tab>
+      <mat-tab label="My Courses">
+        <h2>You currently not enrolled on any courses</h2>
+      </mat-tab>
+      <mat-tab label="Points">
+        <div class="levels">
+          <h2>You currently have 150xp</h2>
+
+          <div class="levels__cards">
+            <mat-card class="login-card">
+              <mat-card-title-group>
+                <mat-card-title>Level 1</mat-card-title>
+                <mat-card-subtitle>
+                  1,200 XP Required
+                </mat-card-subtitle>
+              </mat-card-title-group>
+            </mat-card>
+            <mat-card class="login-card">
+              <mat-card-title-group>
+                <mat-card-title>Level 2</mat-card-title>
+                <mat-card-subtitle>
+                  1,200 XP Required
+                </mat-card-subtitle>
+              </mat-card-title-group>
+            </mat-card>
+            <mat-card class="login-card">
+              <mat-card-title-group>
+                <mat-card-title>Level 3</mat-card-title>
+                <mat-card-subtitle>
+                  1,200 XP Required
+                </mat-card-subtitle>
+              </mat-card-title-group>
+            </mat-card>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Admin">
+        <h2>Admin Area</h2>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+  <!-- <button mat-stroked-button (click)="afAuth.auth.signOut()">Logout</button> -->
+</div>
