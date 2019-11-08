@@ -60,6 +60,9 @@
             <a mat-button routerLink="login" routerLinkActive="active">
               <img mat-card-avatar src="{{ user.photoURL }}" />
             </a>
+            <a mat-button routerLink="login" routerLinkActive="active" (click)="afAuth.auth.signOut()">
+              Logout
+            </a>
           </div>
         </div>
       </mat-toolbar-row>

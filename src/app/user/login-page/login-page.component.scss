@@ -1,55 +1,57 @@
-:host {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-  // text-align: center;
-  min-height: 68vh;
-  
+.login {
+  margin-bottom: 5%;
+  text-align: center;
+
+  button {
+    img {
+      width: 1.25em;
+    }
+  }
+}
+
 .start-learning {
   display: flex;
   justify-content: space-around;
 }
 
-
 .next-level {
   display: inline-flex;
   flex-flow: row-reverse;
 }
-  .example-card {
-    max-width: 400px;
-    margin: 5px;
-  }
+.example-card {
+  max-width: 400px;
+  margin: 5px;
+}
 
-  .example-spacer {
-    flex: 1 1 auto;
-  }
-  .user-info {
-    padding-left: 1rem;
+.example-spacer {
+  flex: 1 1 auto;
+}
+.user-info {
+  padding-left: 1rem;
 
-    span {
-      color: rgba(0, 0, 0, 0.54);
-      font-size: 14px;
-    }
+  span {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 14px;
   }
+}
 
-  .login-card {
-    max-width: 400px;
-  }
+.login-card {
+  max-width: 400px;
+}
 
-  .example-spinner {
-    border: 1px solid #e6e6e6;
-    border-radius: 50%;
-  }
+.example-spinner {
+  border: 1px solid #e6e6e6;
+  border-radius: 50%;
+}
 
-  .levels {
+.levels {
+  display: flex;
+  flex-direction: column;
+  &__cards {
     display: flex;
-    flex-direction: column;
-    &__cards {
-      display: flex;
-      justify-content: space-around;
-    }
+    justify-content: space-around;
   }
+}
 
 .tabs {
   display: flex;
@@ -57,7 +59,6 @@
   margin: 1rem 0;
 }
 
-  .example-stretched-tabs {
-    width: 80%;
-  }
+.example-stretched-tabs {
+  width: 80%;
 }

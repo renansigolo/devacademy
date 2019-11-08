@@ -1,5 +1,16 @@
 // Import Angular Material Theme
-@import 'src/assets/scss/angular-material-theme';
+@import '~@angular/material/theming';
+
+$primary: mat-palette($mat-grey, 900);
+$accent: mat-palette($mat-red, 700);
+$warn: mat-palette($mat-amber, 600);
+
+$theme: mat-light-theme($primary, $accent, $warn);
+
+// Custom Typography config that overrides the font-family
+$devacademy-typography: mat-typography-config(
+  $font-family: 'Nunito, san-serif'
+);
 
 // Import Angular Material Core Dependencies
 @include mat-core();
@@ -27,4 +38,20 @@ body {
 body {
   font-family: Nunito, 'Helvetica Neue', sans-serif;
   margin: 0;
+}
+
+%section-title {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 0;
+
+  h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1em;
+    text-align: center;
+  }
 }
