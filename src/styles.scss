@@ -8,9 +8,7 @@ $warn: mat-palette($mat-amber, 600);
 $theme: mat-light-theme($primary, $accent, $warn);
 
 // Custom Typography config that overrides the font-family
-$devacademy-typography: mat-typography-config(
-  $font-family: 'Nunito, san-serif'
-);
+$devacademy-typography: mat-typography-config($font-family: 'Nunito, san-serif');
 
 // Import Angular Material Core Dependencies
 @include mat-core();
