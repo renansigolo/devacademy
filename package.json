@@ -30,6 +30,7 @@
     "deploy:prod": "npm run build:prod && firebase deploy -P production"
   },
   "dependencies": {
+    "@angular-devkit/schematics": "^9.0.1",
     "@angular/animations": "~9.0.0",
     "@angular/cdk": "~8.2.3",
     "@angular/common": "~9.0.0",
